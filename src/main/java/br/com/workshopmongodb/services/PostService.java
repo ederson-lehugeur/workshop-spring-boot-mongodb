@@ -21,6 +21,10 @@ public class PostService {
 				.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
 	}
 
+	public List<Post> findAll() {
+		return postRepository.findAll();
+	}
+
 	public List<Post> findByTitle(String text) {
 		return postRepository.searchTitle(text);
 	}
